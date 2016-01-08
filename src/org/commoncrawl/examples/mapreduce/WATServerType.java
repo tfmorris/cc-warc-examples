@@ -40,7 +40,7 @@ public class WATServerType extends Configured implements Tool {
 	public int run(String[] arg0) throws Exception {
 		Configuration conf = getConf();
 		//
-		Job job = new Job(conf);
+		Job job = Job.getInstance(conf);
 		job.setJarByClass(WATServerType.class);
 		job.setNumReduceTasks(1);
 		

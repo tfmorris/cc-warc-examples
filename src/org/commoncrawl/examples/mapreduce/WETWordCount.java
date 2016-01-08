@@ -40,7 +40,7 @@ public class WETWordCount extends Configured implements Tool {
 	public int run(String[] arg0) throws Exception {
 		Configuration conf = getConf();
 		//
-		Job job = new Job(conf);
+		Job job = Job.getInstance(conf);
 		job.setJarByClass(WETWordCount.class);
 		job.setNumReduceTasks(1);
 		
